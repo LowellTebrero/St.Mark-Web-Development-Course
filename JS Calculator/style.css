@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top left, rgba(248, 3, 77, 0.555), rgba(98, 0, 255, 0.733));
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+    top: 15%;
+    left: 39.5%;
+    transform: translate(-15, -40);
+    font-size: 2rem;
+    color: white;
+    letter-spacing: .3rem;
+}
+
+.calculator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 25rem;
+    height: 50vh;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 25px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: 1px solid rgba(255, 255, 255, 0.62);
+    padding: 2rem;
+    border-radius: 2rem;
+  
+}
+
+ .grid-input {
+    flex: 1 2 15rem;
+    width: 100%;
+}
+
+.input {
+    width: 83%;
+    height: 40%;
+    padding: 2rem;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: 1px solid rgba(255, 255, 255, 0.62);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+ .grid-wrapper {
+    flex: 2 2 25rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 7vh);
+    grid-template-areas: 
+    "clear plus times minus"
+    " seven eight nine divide"
+    " four five six equal"
+    " one two three equal"
+    " zero zero dot equal";
+    width: 100%;
+}
+
+input[type="button"] {
+    cursor: pointer;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: 1px solid rgba(255, 255, 255, 0.62);
+    padding: 2rem;
+   
+} 
+
+
+.clear {
+    grid-area: clear;
+    transition: 0.2s ease-in-out;
+    border-top-left-radius: 16px;
+}
+.clear:hover{
+    transform:scale(1.1);
+    background-color: rgb(141, 245, 231);
+    border: rgb(115, 245, 227) solid 1px;
+}
+.plus {
+    grid-area: plus;
+    transition: 0.2s ease-in-out;
+}
+.plus:hover {
+    transform:scale(1.1);
+    background-color: rgb(245, 179, 141);
+    border:  rgb(243, 178, 141) solid 1px;
+}
+
+.times {
+    grid-area: times;
+    transition: 0.2s ease-in-out;
+}
+
+.times:hover {
+    transform:scale(1.1);
+    background-color: rgb(207, 141, 245);
+    border:  rgb(202, 126, 247) solid 1px;
+    z-index: 1;
+}
+.minus {
+    grid-area: minus;
+    border-top-right-radius: 16px;
+}
+.equal {
+    grid-area: equal;
+    border-bottom-right-radius: 16px;
+}
+.dot {
+    grid-area: dot;
+}
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.seven {
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+.zero {
+    grid-area: zero;
+    border-bottom-left-radius: 16px;
+}
+
+
+
+/* .grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 5vh);
+    background-color: red;
+    width: 100%;
+ }
+
+
+.input {
+    width: 100%;
+    min-height: 20vh;
+    outline: none;
+    font-size: 2rem;
+}
+
+.input:focus {
+    outline: none;
+}
+
